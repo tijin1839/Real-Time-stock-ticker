@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Real-Time Stock Ticker</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <!-- Socket.IO client -->
+  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Real-Time Stock Ticker</h1>
+      <div class="controls">
+        <button id="snapshotBtn">Snapshot</button>
+        <label>
+          Interval:
+          <select id="intervalSelect">
+            <option value="1000">1s</option>
+            <option value="2000" selected>2s</option>
+            <option value="5000">5s</option>
+          </select>
+        </label>
+        <span id="status" class="status">Disconnected</span>
+      </div>
+    </header>
+
+    <section id="ticker">
+      <table>
+        <thead><tr><th>Symbol</th><th>Price</th><th>Change</th><th>%</th><th>Trend</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </section>
+
+    <footer>
+      <small>Demo: uses Finnhub if FINNHUB_API_KEY is set on the server, otherwise simulated prices.</small>
+    </footer>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

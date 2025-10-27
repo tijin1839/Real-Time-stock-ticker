@@ -1,0 +1,24 @@
+{
+  "name": "real-time-stock-ticker",
+  "version": "1.0.0",
+  "description": "Real-time stock ticker (Socket.IO) — uses Finnhub if FINNHUB_API_KEY provided, otherwise simulates prices.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start-dev": "nodemon server.js"
+  },
+  "keywords": ["stocks", "realtime", "socket.io", "express"],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "socket.io": "^4.8.1",
+    "node-fetch": "^3.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
